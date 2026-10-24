@@ -1,6 +1,6 @@
 body {
-  background-color: beige;
-  color: #302820;
+  background-color: #f4f1ea;
+  color: #292b2d;
   font-family: Arial, sans-serif;
   margin: 0;
 }
@@ -9,7 +9,8 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 6%;
+  padding: 24px 6%;
+  border-bottom: 1px solid #ded8ce;
 }
 
 header h1 {
@@ -22,10 +23,15 @@ nav {
   gap: 24px;
 }
 
-.nav a{
+nav a {
   text-decoration: none;
-  color: #302820;
+  color: #292b2d;
   font-size: 14px;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #a36f4f;
 }
 
 .hero {
@@ -53,7 +59,7 @@ nav {
 .hero-label {
   font-size: 12px;
   letter-spacing: 3px;
-  color: #8A735D;
+  color: #8a735d;
 }
 
 .hero-content h2 {
@@ -65,7 +71,7 @@ nav {
 .hero-description {
   font-size: 16px;
   line-height: 1.7;
-  color: #65594D;
+  color: #65594d;
   max-width: 450px;
 }
 
@@ -73,10 +79,19 @@ nav {
   display: inline-block;
   margin-top: 16px;
   padding: 14px 22px;
-  background-color: #302820;
-  color: #FFFFFF;
+  background-color: #292b2d;
+  color: #ffffff;
   text-decoration: none;
   border-radius: 4px;
+  font-size: 14px;
+  transition:
+    background-color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.hero-button:hover {
+  background-color: #a36f4f;
+  transform: translateY(-2px);
 }
 
 #styles {
@@ -102,15 +117,31 @@ nav {
 }
 
 .style-card {
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   padding: 16px;
   border-radius: 8px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid #e6e0d6;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 .style-card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.10);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.style-card a {
+  display: inline-block;
+  margin-top: 8px;
+  color: #a36f4f;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.style-card a:hover {
+  color: #292b2d;
 }
 
 .style-card img {
@@ -120,6 +151,7 @@ nav {
   object-fit: cover;
   transition: transform 0.3s ease;
   border-radius: 4px;
+  object-position: center 20%;
 }
 
 .style-card:hover img {
@@ -128,26 +160,360 @@ nav {
 
 .style-card h3 {
   font-size: 20px;
+  color: #292b2d;
   margin: 16px 0 8px;
 }
 
 .style-card p {
   font-size: 14px;
-  line-height: 1.6;
-  color: #716558;
+  line-height: 1.7;
+  color: #71685e;
 }
 
-.style-card a {
-  display: inline-block; 
-  margin-top: 8px;
-  color: #70563F;
+/* styling tips */
+
+#tips {
+  padding: 60px 6%;
+  border-top: 1px solid #ded8ce;
+}
+
+#tips h2 {
+  font-size: 32px;
+  margin-bottom: 10px;
+  color: #292b2d;
+}
+
+#tips > p {
+  color: #5e625b;
+  line-height: 1.7;
+  margin-bottom: 28px;
+}
+
+#tips ul {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#tips li {
+  background-color: #ffffff;
+  border: 1px solid #e6e0d6;
+  border-radius: 8px;
+  padding: 24px;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+#tips li h3 {
+  font-size: 18px;
+  margin-top: 0;
+  color: #657b60;
+}
+
+#tips li p {
+  font-size: 14px;
+  line-height: 1.7;
+  color: #5e625b;
+  margin-bottom: 0;
+}
+
+/* style guide table */
+
+#guide {
+  padding: 60px 6%;
+  border-top: 1px solid #ded8ce;
+}
+
+#guide h2 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+#guide > p {
+  color: #5e625b;
+  line-height: 1.7;
+  margin-bottom: 28px;
+}
+
+.table-wrapper {
+  overflow-x: auto;
+}
+
+#guide table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #ffffff;
+  border: 1px solid #e6e0d6;
+}
+
+#guide caption {
+  text-align: left;
+  font-size: 13px;
+  color: #716558;
+  padding-bottom: 10px;
+}
+
+#guide th,
+#guide td {
+  padding: 14px 16px;
+  text-align: left;
+  font-size: 14px;
+  line-height: 1.6;
+  border-bottom: 1px solid #e6e0d6;
+}
+
+#guide thead th {
+  background-color: #292b2d;
+  color: #f4f1ea;
+}
+
+#guide tbody tr:hover {
+  background-color: #f4f1ea;
+}
+
+/* style inspiration */
+
+#inspiration {
+  padding: 60px 6%;
+  border-top: 1px solid #ded8ce;
+}
+
+#inspiration h2 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+#inspiration > p {
+  color: #5e625b;
+  line-height: 1.7;
+  margin-bottom: 28px;
+}
+
+#inspiration h3 {
+  font-size: 20px;
+  margin: 32px 0 16px;
+}
+
+.pinterest-links {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 24px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.pinterest-links a {
+  display: block;
+  padding: 12px;
+  background-color: #ffffff;
+  border: 1px solid #e6e0d6;
+  border-radius: 8px;
+  color: #292b2d;
+  text-decoration: none;
+  font-size: 14px;
+  text-align: center;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.pinterest-links a:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.pinterest-links img {
+  display: block;
+  width: 100%;
+  height: 360px;
+  object-fit: cover;
+  border-radius: 4px;
+  margin-bottom: 12px;
+  object-position: center 10%;
+}
+
+.people-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 24px;
+}
+
+.people-card {
+  background-color: #ffffff;
+  padding: 24px;
+  border-radius: 8px;
+  border: 1px solid #e6e0d6;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.people-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.people-card h4 {
+  font-size: 18px;
+  margin: 0 0 8px;
+  color: #657b60;
+}
+
+.people-card p {
+  font-size: 14px;
+  line-height: 1.7;
+  color: #5e625b;
+  margin: 0 0 12px;
+}
+
+.people-card a {
+  color: #a36f4f;
   text-decoration: none;
   font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.people-card a:hover {
+  color: #292b2d;
+}
+
+.people-card img {
+  display: block;
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 4px;
+  margin-bottom: 16px;
+}
+
+#consultation {
+  padding: 60px 6%;
+  border-top: 1px solid #ded8ce;
+}
+
+#consultation h2 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+#consultation > p {
+  color: #5e625b;
+  line-height: 1.7;
+  margin-bottom: 28px;
+}
+
+.consultation-form {
+  max-width: 650px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+#consultation h3 {
+  font-size: 20px;
+  margin: 0 0 12px;
+}
+
+.consultation-steps {
+  max-width: 650px;
+  padding-left: 20px;
+  margin: 0 0 28px;
+  line-height: 1.8;
+  color: #5e625b;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group label {
+  font-size: 14px;
+  font-weight: bold;
+  color: #292b2d;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 12px 14px;
+  border: 1px solid #d5cfc5;
+  border-radius: 4px;
+  background-color: #ffffff;
+  color: #292b2d;
+  font: inherit;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: 2px solid #657b60;
+  outline-offset: 2px;
+}
+
+.consultation-form button {
+  align-self: flex-start;
+  padding: 14px 24px;
+  border: none;
+  border-radius: 4px;
+  background-color: #292b2d;
+  color: #ffffff;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.consultation-form button:hover {
+  background-color: #657b60;
+}
+
+footer {
+  background-color: #292b2d;
+  color: #f4f1ea;
+  padding: 24px 6%;
+  text-align: center;
+  border-top: 3px solid #657b60;
+}
+
+footer p {
+  margin: 0;
+  font-size: 13px;
+  letter-spacing: 1px;
+  line-height: 1.8;
+}
+
+footer a {
+  color: #f4f1ea;
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: #a36f4f;
 }
 
 @media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+  }
+
   .style-container {
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 16px;
   }
 
@@ -155,8 +521,19 @@ nav {
     font-size: 32px;
   }
 
-  .hero-image {
+  .hero {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 40px 6%;
+    gap: 24px;
+  }
+
+  .hero-image img {
     height: 320px;
+  }
+
+  #tips ul {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
@@ -169,10 +546,14 @@ nav {
     flex-direction: column;
     gap: 16px;
   }
-  
+
   nav {
     flex-wrap: wrap;
     justify-content: center;
     gap: 12px;
+  }
+
+  #tips ul {
+    grid-template-columns: 1fr;
   }
 }
