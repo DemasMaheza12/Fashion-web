@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: #f4f1ea;
   color: #292b2d;
@@ -33,6 +37,8 @@ nav a {
 nav a:hover {
   color: #a36f4f;
 }
+
+/* hero section */
 
 .hero {
   display: flex;
@@ -93,6 +99,8 @@ nav a:hover {
   background-color: #a36f4f;
   transform: translateY(-2px);
 }
+
+/* styles sections */
 
 #styles {
   padding: 60px 6%;
@@ -298,6 +306,8 @@ nav a:hover {
   margin: 32px 0 16px;
 }
 
+/* pinterest link */
+
 .pinterest-links {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -391,6 +401,8 @@ nav a:hover {
   margin-bottom: 16px;
 }
 
+/* consultation section */
+
 #consultation {
   padding: 60px 6%;
   border-top: 1px solid #ded8ce;
@@ -426,6 +438,8 @@ nav a:hover {
   line-height: 1.8;
   color: #5e625b;
 }
+
+/* form  */
 
 .form-group {
   display: flex;
@@ -474,6 +488,8 @@ nav a:hover {
 .consultation-form button:hover {
   background-color: #657b60;
 }
+
+/* footer */
 
 footer {
   background-color: #292b2d;
